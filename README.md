@@ -61,3 +61,9 @@ eg - curl -X GET -H "Cache-Control: no-cache" -H "http://localhost:8080/query?uI
 
 
 Also sql files are attached in the resources folder which will create the tables and data for testing the APIs
+
+User and Roles are many-to-many relation. Hence, their relation is given in user_role table.
+
+Similary one role can have any number of actions on a resource and it can also have many resources.
+
+So I have made a table rra which maintains the relationship between role, resources and action. One entry of this table tells that this role has this action on this particular resource.
